@@ -34,7 +34,8 @@ import java.util.concurrent.TimeUnit;
 
         }
         @AfterMethod
-        public void tearDown() {
+        public void tearDown() throws InterruptedException {
+            Thread.sleep(10000);
             wd.quit();
 
         }
